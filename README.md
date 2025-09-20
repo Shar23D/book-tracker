@@ -107,6 +107,30 @@ VITE_SUPABASE_URL=
 VITE_SUPABASE_ANON_KEY=
 ```
 
+## Deployment to github page
+```bash
+npm install gh-pages --save-dev
+```
+
+at the top of package.json add github site where the site will be deployed
+
+```json
+"homepage": "https://shar23d.github.io/book-tracker",
+```
+
+and in scripts add
+
+```json
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+```
+
+in vite.config.js add base (/repo name)
+```js
+export default defineConfig({
+  base: "/book-tracker",
+});
+```
 
 ## 📬 Contact
 
